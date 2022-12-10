@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+<!-- nav -->
+<nav class="navbar">
+  <a class="brand" href="#">SOLAR LABS</a>
+</nav>
+
+<div class="card">
+
+<input type="checkbox" id="myCheck" onclick="myFunction()">
+<label for="myCheck">2021</label> 
+
+<br>
+
+<input type="checkbox" id="Check" onclick="myFun()">
+<label for="myCheck">2022</label> 
+<br>
+
+<input type="checkbox" id="newCheck" onclick="newFun()">
+<label for="my_Check">2023</label> 
+</div>
+
+
+<!-- year1 -->
+<div class="year1" id="text" style="display:none">
+<label for="membership">select</label>
+<!-- <button onclick="resetF()">Reset</button> -->
+<select name="membership" id="membership" onchange=inputfield()>
+  <option value="none" selected></option>
+  
+  <option value="1">Jan-Apr</option>
+  <option value="2">May-Aug</option>
+  <option value="3">Sep-Dec</option>
+</select>
+<button onclick="resetF()" id="res">Reset</button>
+<div class="y1" id="ye1" style="display:none; margin-top: 40px;">
+<label for="num1">Jan</label>  <input id ="num1" type="numeber" name="number1" style="width: 100px; margin-left: 5px;"> <br>
+  <label for="num2">Feb</label><input id ="num2"  type="numeber" name="number2" style="width: 100px; margin-top: 10px; margin-left: 5px;"> <br>
+ <label for="num3">Mar</label> <input id ="num3"  type="numeber" name="number3" style="width: 100px; margin-top: 10px; margin-left: 0px;"><br>
+  <label for="num4">Apr</label><input  id ="num4" type="numeber" name="number4" style="width: 100px; margin-top: 10px; margin-left: 5px;">
+ 
+</div>
+
+
+<div class="y1" id="ye11" style="display:none; margin-top: 40px;">
+<label for="num1">May</label>  <input id ="num5" type="numeber" name="number1"  style="width: 100px; margin-left: 5px;"> <br>
+  <label for="num2">Jun</label><input id ="num6"  type="numeber" name="number2" style="width: 100px; margin-top: 10px; margin-left: 5px;"> <br>
+ <label for="num3">Jul</label> <input id ="num7"  type="numeber" name="number3" style="width: 100px; margin-top: 10px; margin-left: 0px;"><br>
+  <label for="num4">Aug</label><input  id ="num8" type="numeber" name="number4" style="width: 100px; margin-top: 10px; margin-left: 5px;">
+</div>
+
+<div class="y1" id="ye111" style="display:none; margin-top: 40px;">
+<label for="num1">Sep</label>  <input id ="num9" type="numeber" name="number1"  style="width: 100px; margin-left: 5px;"> <br>
+  <label for="num2">Oct</label><input id ="num10"  type="numeber" name="number2" style="width: 100px; margin-top: 10px; margin-left: 5px;"> <br>
+ <label for="num3">Nov</label> <input id ="num11"  type="numeber" name="number3" style="width: 100px; margin-top: 10px; margin-left: 0px;"><br>
+  <label for="num4">Dec</label><input  id ="num12" type="numeber" name="number4" style="width: 100px; margin-top: 10px; margin-left: 5px;">
+</div>
+
+<button id="calc">Calculate</button>
+</div>
+
+<!-- year2 -->
+
+<div class="year2" id="text2" style="display:none">
+<label for="membership">select</label>
+<select name="membership" id="membership2" onchange=inputfield2()>
+  <option value="none" selected></option>
+  
+  <option value="1">Jan-Apr</option>
+  <option value="2">May-Aug</option>
+  <option value="3">Sep-Dec</option>
+</select>
+<button onclick="resetF()" id="res">Reset</button>
+
+<div class="y1" id="ye2" style="display:none; margin-top: 40px;">
+<label for="num1">Jan</label>  <input id ="num13" type="numeber" name="number1"  style="width: 100px; margin-left: 5px;"> <br>
+  <label for="num2">Feb</label><input id ="num14"  type="numeber" name="number2" style="width: 100px; margin-top: 10px; margin-left: 5px;"> <br>
+ <label for="num3">Mar</label> <input id ="num15"  type="numeber" name="number3" style="width: 100px; margin-top: 10px; margin-left: 0px;"><br>
+  <label for="num4">Apr</label><input  id ="num16" type="numeber" name="number4" style="width: 100px; margin-top: 10px; margin-left: 5px;">
+</div>
+
+<div class="y1" id="ye22" style="display:none; margin-top: 40px;">
+<label for="num1">May</label>  <input id ="num17" type="numeber" name="number1"  style="width: 100px; margin-left: 5px;"> <br>
+  <label for="num2">Jun</label><input id ="num18"  type="numeber" name="number2" style="width: 100px; margin-top: 10px; margin-left: 5px;"> <br>
+ <label for="num3">Jul</label> <input id ="num19"  type="numeber" name="number3" style="width: 100px; margin-top: 10px; margin-left: 0px;"><br>
+  <label for="num4">Aug</label><input  id ="num20" type="numeber" name="number4" style="width: 100px; margin-top: 10px; margin-left: 5px;">
+</div>
+
+<div class="y1" id="ye222" style="display:none; margin-top: 40px;">
+<label for="num1">Sep</label>  <input id ="num21" type="numeber" name="number1"  style="width: 100px; margin-left: 5px;"> <br>
+  <label for="num2">Oct</label><input id ="num22"  type="numeber" name="number2" style="width: 100px; margin-top: 10px; margin-left: 5px;"> <br>
+ <label for="num3">Nov</label> <input id ="num23"  type="numeber" name="number3" style="width: 100px; margin-top: 10px; margin-left: 0px;"><br>
+  <label for="num4">Dec</label><input  id ="num24" type="numeber" name="number4" style="width: 100px; margin-top: 10px; margin-left: 5px;">
+</div>
+  <button id="calc">Calculate</button>
+</div>
+
+
+<!-- year3 -->
+<div class="year3" id="text3" style="display:none">
+<label for="membership">select</label>
+<select name="membership" id="membership3" onchange=inputfield3()>
+  <option value="none" selected></option>
+  
+  <option value="1">Jan-Apr</option>
+  <option value="2">May-Aug</option>
+  <option value="3">Sep-Dec</option>
+</select>
+
+<button onclick="resetF()" id="res">Reset</button>
+<div class="y1" id="ye3" style="display:none; margin-top: 40px;">
+<label for="num1">Jan</label>  <input id ="num25" type="numeber" name="number1"  style="width: 100px; margin-left: 5px;"> <br>
+  <label for="num2">Feb</label><input id ="num26"  type="numeber" name="number2" style="width: 100px; margin-top: 10px; margin-left: 5px;"> <br>
+ <label for="num3">Mar</label> <input id ="num27"  type="numeber" name="number3" style="width: 100px; margin-top: 10px; margin-left: 0px;"><br>
+  <label for="num4">Apr</label><input  id ="num28" type="numeber" name="number4" style="width: 100px; margin-top: 10px; margin-left: 5px;">
+</div>
+
+<div class="y1" id="ye33" style="display:none; margin-top: 40px;">
+<label for="num1">May</label>  <input id ="num29" type="numeber" name="number1"  style="width: 100px; margin-left: 5px;"> <br>
+  <label for="num2">Jun</label><input id ="num30"  type="numeber" name="number2" style="width: 100px; margin-top: 10px; margin-left: 5px;"> <br>
+ <label for="num3">Jul</label> <input id ="num31"  type="numeber" name="number3" style="width: 100px; margin-top: 10px; margin-left: 0px;"><br>
+  <label for="num4">Aug</label><input  id ="num32" type="numeber" name="number4" style="width: 100px; margin-top: 10px; margin-left: 5px;">
+</div>
+
+<div class="y1" id="ye333" style="display:none; margin-top: 40px;">
+<label for="num1">Sep</label>  <input id ="num33" type="numeber" name="number1"  style="width: 100px; margin-left: 5px;"> <br>
+  <label for="num2">Oct</label><input id ="num34"  type="numeber" name="number2" style="width: 100px; margin-top: 10px; margin-left: 5px;"> <br>
+ <label for="num3">Nov</label> <input id ="num35"  type="numeber" name="number3" style="width: 100px; margin-top: 10px; margin-left: 0px;"><br>
+  <label for="num4">Dec</label><input  id ="num36" type="numeber" name="number4" style="width: 100px; margin-top: 10px; margin-left: 5px;">
+</div>
+  <button id="calc">Calculate</button>
+</div>
+
+
+
+
+
+</body>
+</html>
